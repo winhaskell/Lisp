@@ -1,0 +1,21 @@
+Newton-Raphson algorithm
+
+https://aliquote.org/post/newton-raphson-racket/
+
+Here is an implementation of the Newton-Raphson algorithm in Racket Scheme.
+
+Our goal is to implement a toy example of logistic regression, where the parameters of the statistical model are
+estimated using Newton-Raphson iterative algorithm. 
+
+
+> (define (f x) (- (sqr x) 9))
+> (define (fp x) (* 2 x))
+> (define (newton x f fp)
+  (let ((guess (- x (/ (f x) (fp x)))))
+    (if (> (abs (- x guess)) 1e-6)
+      (newton guess f fp)
+      guess)))
+> (display (newton 0.1 f fp))
+3.000000000000009
+>
+
