@@ -1,3 +1,6 @@
+Ref: https://stackoverflow.com/questions/33540789/scheme-quick-sort-with-filter
+
+
 #lang racket
 (define (quick-sort arr)
   (cond
@@ -10,3 +13,6 @@
       
  (quick-sort '(23 34 33 99 1 7 29 61 6 79))
 '(1 6 7 23 29 33 34 61 79 99)
+
+
+
